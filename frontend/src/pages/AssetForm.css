@@ -1,0 +1,234 @@
+.asset-form-page {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.asset-form-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.asset-form-header h2 {
+    margin: 0;
+    color: #111827;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.asset-form-header p {
+    margin: 6px 0 0;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.asset-back-button {
+    border: 1px solid #d1d5db;
+    background: white;
+    color: #374151;
+    padding: 10px 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.asset-back-button:hover {
+    background: #f9fafb;
+}
+
+.asset-form-error {
+    margin-bottom: 20px;
+    padding: 14px 18px;
+    border-radius: 8px;
+    background: #fee2e2;
+    border: 1px solid #fecaca;
+    color: #b91c1c;
+    font-size: 14px;
+}
+
+.asset-form-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.asset-form-section {
+    padding: 25px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.asset-form-section:last-of-type {
+    border-bottom: none;
+}
+
+.asset-form-section-title {
+    margin-bottom: 20px;
+}
+
+.asset-form-section-title h4 {
+    margin: 0;
+    color: #111827;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.asset-form-section-title p {
+    margin: 5px 0 0;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+.asset-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.form-field label {
+    margin-bottom: 7px;
+    color: #374151;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 11px 12px;
+    background: white;
+    color: #111827;
+    font-size: 14px;
+    outline: none;
+    font-family: inherit;
+}
+
+.form-field input,
+.form-field select {
+    height: 44px;
+}
+
+.form-field textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+    color: #9ca3af;
+}
+
+.character-count {
+    align-self: flex-end;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+.asset-form-actions {
+    padding: 20px 25px;
+    background: #f9fafb;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+.asset-cancel-button,
+.asset-save-button {
+    min-width: 120px;
+    height: 42px;
+    border-radius: 8px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.asset-cancel-button {
+    border: 1px solid #d1d5db;
+    background: white;
+    color: #374151;
+}
+
+.asset-cancel-button:hover {
+    background: #f3f4f6;
+}
+
+.asset-save-button {
+    border: none;
+    background: #2563eb;
+    color: white;
+}
+
+.asset-save-button:hover {
+    background: #1d4ed8;
+}
+
+.asset-cancel-button:disabled,
+.asset-save-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.asset-form-loading {
+    padding: 60px 20px;
+    text-align: center;
+    color: #6b7280;
+}
+
+@media (max-width: 768px) {
+
+    .asset-form-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .asset-back-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .asset-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .asset-form-section {
+        padding: 20px;
+    }
+
+    .asset-form-actions {
+        padding: 18px 20px;
+        flex-direction: column-reverse;
+    }
+
+    .asset-cancel-button,
+    .asset-save-button {
+        width: 100%;
+    }
+}
